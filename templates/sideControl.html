@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body>              
+        <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+            <h1 class="display-4 fw-normal">Side Control</h1>
+            <p>Side control is when the top athlete is perpendicular to the bottom athlete and can control his or her opponent from the side of the body. This is an ideal position for controlling the bottom athlete and can lead to powerful submissions. As the bottom athlete, your guard has been passed and you need to either re-guard or use a move to sweep your opponent.
+        </p>
+        </div> 
+<div class="album py-5 bg-light">       
+
+<ul>
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+  {% for move in Side_Controls %}
+        <div class="card">
+          <img src="{{move.image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{move.name}}</h5>
+            <p class="card-text">{{move.info}}</p>
+            <p class="card-text"><small class="text-muted">Image Credit: {{move.imageCredit}}</small></p>
+            <a href="#" class="btn btn-primary"> Go To {{move.name}}</a>
+         </div>
+      </div> 
+  {% endfor %}
+</div>
+</div>
+</ul>        
+</body>
+{% endblock %}
+</html>

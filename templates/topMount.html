@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body>              
+        <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+            <h1 class="display-4 fw-normal">Top Mount</h1>
+            <p>For the top athlete, the top mount is a highly effective attacking position. There are various strikes and submissions which you can use to finish a fight. However, as the bottom athlete, you must work to get out of this position.
+        </p>
+        </div>
+<div class="album py-5 bg-light">         
+
+<ul>
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+  {% for move in Top_Mounts %}
+        <div class="card">
+          <img src="{{move.image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{move.name}}</h5>
+            <p class="card-text">{{move.info}}</p>
+            <p class="card-text"><small class="text-muted">Image Credit: {{move.imageCredit}}</small></p>
+            <a href="#" class="btn btn-primary"> Go To {{move.name}}</a>
+         </div>
+      </div> 
+  {% endfor %}
+</div>
+</div>
+</ul>
+<footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <div class="row">
+      <div class="col-12 col-md">
+        <!-- <img class="mb-2" src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="24" height="19"> -->
+        <small class="d-block mb-3 text-muted">© 2020–2021</small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Features</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Cool stuff</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Random feature</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team feature</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Stuff for developers</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another one</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Last time</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Resources</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another resource</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Final resource</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>About</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Locations</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
+        </ul>
+      </div>
+    </div>  
+</body>
+{% endblock %}
+</html>

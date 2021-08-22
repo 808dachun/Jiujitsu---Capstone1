@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body>   
+  <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+    <h1 class="display-4 fw-normal">Ground Position</h1>
+    <p class="fs-5 text-muted">Taking your opponent allows you to use your body position and technique to control your opponent and ulitmately end the fight through strikes or submissions.</p>
+
+  </div>
+  
+<div class="album py-5 bg-light">
+<ul>
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+  {% for ground_position in ground_positions %}
+    
+        <div class="card">
+          <img src="{{ground_position.image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{ground_position.name}}</h5>
+            <p class="card-text">{{ground_position.info}}</p>
+            <p class="card-text"><small class="text-muted">Image Credit: {{ground_position.imageCredit}}</small></p>
+            <a href="/{{ground_position.name}}" class="btn btn-primary"> Learn {{ground_position.name}}</a>
+         </div>
+      </div> 
+  {% endfor %}
+</div>
+</div>
+</ul>
+</body>
+{% endblock %}
+</html>
+

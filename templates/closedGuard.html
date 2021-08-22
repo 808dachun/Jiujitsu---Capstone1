@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+</head>
+<body>                
+        <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+            <h1 class="display-4 fw-normal">Closed Guard</h1>
+            <p>Closed guard is when the bottom athlete has both of their legs wrapped around their opponent. This is an effective defensive position that restricts your opponent's. The closed guard also allows the bottom athlete to either sweep or attack with submissions. As the top athlete, your ultimate job is to break your opponent's closed guard or wrapped legs around your waist.
+        </p>
+        </div>    
+<div class="album py-5 bg-light">
+<ul>
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+  {% for move in Closed_Guards %}
+        <div class="card">
+          <img src="{{move.image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{move.name}}</h5>
+            <p class="card-text">{{move.info}}</p>
+            <p class="card-text"><small class="text-muted">Image Credit: {{move.imageCredit}}</small></p>
+            <a href="#" class="btn btn-primary"> Go To {{move.name}}</a>
+         </div>
+      </div> 
+  {% endfor %}
+</div>
+</div>
+</ul>        
+</body>
+{% endblock %}
+</html>

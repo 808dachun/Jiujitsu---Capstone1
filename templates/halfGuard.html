@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body>
+                    
+        <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+            <h1 class="display-4 fw-normal">Half Guard</h1>
+            <p>Half guard is one of the best positions for the top athlete to pass your opponent's guard to either side control or top-mount. Surprisingly, half-guard is also the best position to maintain control and protect yourself from submissions and strikes from the top athlete.
+        </p>
+        </div>
+<div class="album py-5 bg-light">      
+
+<ul>
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+  {% for move in Half_Guards %}
+        <div class="card">
+          <img src="{{move.image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{move.name}}</h5>
+            <p class="card-text">{{move.info}}</p>
+            <p class="card-text"><small class="text-muted">Image Credit: {{move.imageCredit}}</small></p>
+            <a href="#" class="btn btn-primary"> Go To {{move.name}}</a>
+         </div>
+      </div> 
+  {% endfor %}
+</div>
+</div>
+</ul>
+
+{% endblock %}
+        
+</body>
+</html>

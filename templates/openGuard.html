@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body>              
+        <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+            <h1 class="display-4 fw-normal">Open Guard</h1>
+            <p>Open guard is a defensive position for the bottom player when you can utilize your your feet and hands to either keep your or create connection with the top player while their back and hips are on the floor. In a self defense situation, the bottom person can kick at their opponent and utilize their arms as shields against any strikes. 
+        </p>
+        </div>  
+<div class="album py-5 bg-light">       
+<ul>
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+  {% for move in Open_Guards %}
+        <div class="card">
+          <img src="{{move.image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{move.name}}</h5>
+            <p class="card-text">{{move.info}}</p>
+            <p class="card-text"><small class="text-muted">Image Credit: {{move.imageCredit}}</small></p>
+            <a href="#" class="btn btn-primary"> Go To {{move.name}}</a>
+         </div>
+      </div> 
+  {% endfor %}
+</div>
+</div>
+</ul>   
+</body>
+{% endblock %}
+</html>
